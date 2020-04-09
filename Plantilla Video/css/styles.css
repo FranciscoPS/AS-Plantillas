@@ -1,0 +1,169 @@
+/*Gracias a esto, si tienes un elemento y le defines un ancho, al agregar padding no le va a afectar*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  img{
+    max-width: 100%;
+    background-attachment: fixed;
+  }
+  
+  body{
+    font-family: 'Lato', sans-serif;
+  }
+  
+  h2{
+    font-family: 'Noto Serif', serif;;
+  }
+  
+  .logo{
+    max-width: 100px;
+    width: 70px;
+  }
+  
+  .logo2{
+    max-width: 100px;
+    position: center center;
+    margin-top: 10px;
+    height: 50px;
+    width: auto;
+  }
+  
+  .bg-form{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.6),
+    rgba(255,255,255,.6)),
+    url(/img/Logo\ Alivio\ transparente.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  
+  /**Header**/
+  
+  .site-header{
+    background-color: #754B8B;
+  }
+  
+  .form-header{
+    background-color: #D7C1E3;
+  }
+
+/**Main**/
+
+.seccion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor{ /*Esta clase va a funcionar para siempre tener bien definido el margen de los textos y demas elementos
+    en la pagina*/
+    max-width: 1200px; /**=1200px**/
+    margin-left:auto;   /*Aplicara los margin en automatico ya que no siempre van a ser iguales*/
+    margin-right: auto;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/**Anuncios**/
+.contenedor-anuncios{    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*Hara que cuando llegue al limite, en lugar de seguirse, posicione abajo el contenido*/
+}
+
+.anuncio{
+
+    flex: 0 0 calc(33.3% - 1rem); 
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio{
+    padding: 20px;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p{
+    margin: 0;
+}
+
+/**BOTONES**/
+/*Los enlaces requieren cambio de display para modificar sus caracteristicas*/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 30px; /*1 rem arriba y abajo, 3 rem costados*/
+    margin-top: 30px;
+    display: inline-block; /*Modifica sin tomar todo el espacio disponible*/
+    text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer; /*Al pasar por arriba del botón, el cursor cambia por una mano, hay muchos cursores*/
+}
+
+.boton-amarillo{
+    background-color: #DA81F5;
+}
+
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;    
+    justify-content: space-evenly; /*Es lo mismo que usar el flex 1 de abajo, pero los centra mejor */
+    max-width: 500px;
+    flex: 1; /*Para que no se compriman los elementos*/
+}
+
+.iconos-caracteristicas li{ /*
+    flex: 1;    /*Distribuye el espacio*/
+    display: flex;  /*Alinea el icono con el numero*/
+}
+
+.iconos-caracteristicas li img{
+    margin-right: 2rem; 
+}
+
+/** Footer **/
+
+.site-footer{
+    background-color: #754B8B;
+    margin: 0; /*Le quitamos el margin que por defecto se pone en la clase sección*/
+}
+
+.contenedor-footer{
+    padding: 30px 0; /*Espacio hacia adentro de 3 rem arriba y abajo, 0 izquierda y derecha*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    margin: 0; /*Para quitarle al parrafo el margin por defecto*/
+    color: white;
+}
+
+.navegacion a{
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    font-size: 18px; /**=18px**/
+    margin-right: 20px;
+}
+
+.navegacion a:last-of-type{
+    margin-right: 0;
+
+}
+
+.navegacion a:hover{
+    color: #71B100; /*Al pasar el mouse encima, cambia de color*/
+}
